@@ -30,6 +30,7 @@ class PortfolioCollectionViewCell: UICollectionViewCell {
         pageControl.contentHorizontalAlignment = .center
         pageControl.setFillColor(.white, for: .selected)
         pageControl.setFillColor(.black, for: .normal)
+        furLabel.font = .regular(size: 15)
     }
 
     func configure(portfolio: PortfolioModel) {

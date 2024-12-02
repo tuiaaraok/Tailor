@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PortfolioFormViewController" customModule="Tailor" customModuleProvider="target">
             <connections>
+                <outlet property="cancelButton" destination="8lt-qj-Sw9" id="3Fk-cJ-vTA"/>
                 <outlet property="descriptionTextView" destination="gOZ-J4-237" id="kep-B3-rMI"/>
                 <outlet property="furTextField" destination="pUu-xt-Fkf" id="BMD-iG-GBq"/>
                 <outlet property="pageControl" destination="NEq-eL-etS" id="hsh-4Y-c9z"/>

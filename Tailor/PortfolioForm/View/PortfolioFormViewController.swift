@@ -19,6 +19,7 @@ class PortfolioFormViewController: UIViewController {
     @IBOutlet weak var pageControl: FSPageControl!
     @IBOutlet var tapGesture: UITapGestureRecognizer!
     @IBOutlet weak var saveButton: BaseButton!
+    @IBOutlet weak var cancelButton: UIButton!
     private let viewModel = PortfolioFormViewModel.shared
     private var cancellables: Set<AnyCancellable> = []
     var completion: (() -> ())?
@@ -33,6 +34,8 @@ class PortfolioFormViewController: UIViewController {
         setNavigationTitle(title: "Portfoilo")
         navigationItem.hidesBackButton = true
         titleLabels.forEach({ $0.font = .regular(size: 18) })
+        cancelButton.addShadow()
+        saveButton.addShadow()
         descriptionTextView.layer.borderWidth = 1
         descriptionTextView.layer.borderColor = UIColor.black.cgColor
         pagerView.layer.masksToBounds = true

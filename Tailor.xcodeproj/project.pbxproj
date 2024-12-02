@@ -56,6 +56,8 @@
 		6B83ACA12CFE67AA0061FB37 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B83AC9E2CFE67AA0061FB37 /* AnalyticsViewController.swift */; };
 		6B83ACA42CFE6AAC0061FB37 /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B83ACA32CFE6AAC0061FB37 /* AnalyticsViewModel.swift */; };
 		6B83ACA62CFE6DF80061FB37 /* LaBelleAurore.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B83ACA52CFE6DF80061FB37 /* LaBelleAurore.ttf */; };
+		6B83ACAA2CFE755C0061FB37 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B83ACA92CFE755C0061FB37 /* SettingsViewController.xib */; };
+		6B83ACAB2CFE755C0061FB37 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B83ACA82CFE755C0061FB37 /* SettingsViewController.swift */; };
 		F03A06F156D26B48BC2284BF /* Pods_Tailor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA14AE2D5FB27EBD12069BA /* Pods_Tailor.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +114,8 @@
 		6B83AC9F2CFE67AA0061FB37 /* AnalyticsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnalyticsViewController.xib; sourceTree = "<group>"; };
 		6B83ACA32CFE6AAC0061FB37 /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
 		6B83ACA52CFE6DF80061FB37 /* LaBelleAurore.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaBelleAurore.ttf; sourceTree = "<group>"; };
+		6B83ACA82CFE755C0061FB37 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6B83ACA92CFE755C0061FB37 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		77F34EDF0ECBA4DE63DBCBEC /* Pods-Tailor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tailor.release.xcconfig"; path = "Target Support Files/Pods-Tailor/Pods-Tailor.release.xcconfig"; sourceTree = "<group>"; };
 		F206ED1462E4AFE145A908B0 /* Pods-Tailor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tailor.debug.xcconfig"; path = "Target Support Files/Pods-Tailor/Pods-Tailor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +162,7 @@
 		6B542EB12CFDA23A007877B6 /* Tailor */ = {
 			isa = PBXGroup;
 			children = (
+				6B83ACA72CFE754D0061FB37 /* Settings */,
 				6B83AC9C2CFE67870061FB37 /* Analytics */,
 				6B83AC902CFE26E40061FB37 /* OrderForm */,
 				6B83AC7F2CFDE9F40061FB37 /* Orders */,
@@ -404,6 +409,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6B83ACA72CFE754D0061FB37 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6B83ACA82CFE755C0061FB37 /* SettingsViewController.swift */,
+				6B83ACA92CFE755C0061FB37 /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		DACE31A03A8215F1D4669EE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +491,7 @@
 				6B542EB52CFDA23A007877B6 /* LaunchScreen.storyboard in Resources */,
 				6B542EB62CFDA23A007877B6 /* Root.storyboard in Resources */,
 				6B542EBF2CFDA83A007877B6 /* MenuViewController.xib in Resources */,
+				6B83ACAA2CFE755C0061FB37 /* SettingsViewController.xib in Resources */,
 				6B83AC8E2CFE046B0061FB37 /* OrderTableViewCell.xib in Resources */,
 				6B542EE52CFDA906007877B6 /* Jaldi-Regular.ttf in Resources */,
 				6B83AC6D2CFDAEA90061FB37 /* PortfolioCollectionViewCell.xib in Resources */,
@@ -574,6 +589,7 @@
 				6B542EE22CFDA8E5007877B6 /* NumberTextField.swift in Sources */,
 				6B83AC9B2CFE33220061FB37 /* OrderFormViewModel.swift in Sources */,
 				6B83ACA12CFE67AA0061FB37 /* AnalyticsViewController.swift in Sources */,
+				6B83ACAB2CFE755C0061FB37 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

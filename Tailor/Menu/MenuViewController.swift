@@ -13,6 +13,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
         menuButtons.forEach({ $0.titleLabel?.font = .bold(size: 30); $0.addShadow() })
     }
 
@@ -29,5 +30,6 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func clickedSettings(_ sender: UIButton) {
+        self.pushViewController(SettingsViewController.self)
     }
 }
