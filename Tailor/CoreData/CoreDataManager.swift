@@ -127,6 +127,7 @@ class CoreDataManager {
                 let results = try backgroundContext.fetch(fetchRequest)
                 if let order = results.first {
                     order.isCompleted = true
+                    order.completionDate = Date().stripTime()
                 } else {
                     completion(NSError(domain: "CoreDataManager", code: 404, userInfo: [NSLocalizedDescriptionKey: "Order not found"]))
                 }
@@ -164,125 +165,39 @@ class CoreDataManager {
         }
     }
     
-//    func saveShopping(shoppingModel: ShoppingModel, completion: @escaping (Error?) -> Void) {
-//        let id = shoppingModel.id
-//        let backgroundContext = persistentContainer.newBackgroundContext()
-//        backgroundContext.perform {
-//            let fetchRequest: NSFetchRequest<Shopping> = Shopping.fetchRequest()
-//            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
-//            
-//            do {
-//                let results = try backgroundContext.fetch(fetchRequest)
-//                let shopping: Shopping
-//                
-//                if let existingShopping = results.first {
-//                    shopping = existingShopping
-//                } else {
-//                    shopping = Shopping(context: backgroundContext)
-//                    shopping.id = id
-//                }
-//                    
-//                shopping.name = shoppingModel.name
-//                shopping.price = shoppingModel.price ?? 0
-//                shopping.isCompleted = shoppingModel.isCompleted
-//                
-//                try backgroundContext.save()
-//                DispatchQueue.main.async {
-//                    completion(nil)
-//                }
-//            } catch {
-//                DispatchQueue.main.async {
-//                    completion(error)
-//                }
-//            }
-//        }
-//    }
-    
-//    func saveShoppings(shoppingsModel: [ShoppingModel], completion: @escaping (Error?) -> Void) {
-//        let backgroundContext = persistentContainer.newBackgroundContext()
-//        backgroundContext.perform {
-//            do {
-//                for shoppingModel in shoppingsModel {
-//                    let fetchRequest: NSFetchRequest<Shopping> = Shopping.fetchRequest()
-//                    fetchRequest.predicate = NSPredicate(format: "id == %@", shoppingModel.id as CVarArg)
-//                    
-//                    let results = try backgroundContext.fetch(fetchRequest)
-//                    let shopping: Shopping
-//                    
-//                    if let existingShopping = results.first {
-//                        shopping = existingShopping
-//                    } else {
-//                        shopping = Shopping(context: backgroundContext)
-//                        shopping.id = shoppingModel.id
-//                    }
-//                    
-//                    shopping.name = shoppingModel.name
-//                    shopping.price = shoppingModel.price ?? 0
-//                    shopping.isCompleted = shoppingModel.isCompleted
-//                    shopping.date = shoppingModel.date
-//                }
-//                
-//                try backgroundContext.save()
-//                
-//                DispatchQueue.main.async {
-//                    completion(nil)
-//                }
-//            } catch {
-//                DispatchQueue.main.async {
-//                    completion(error)
-//                }
-//            }
-//        }
-//    }
-//
-//    
-//    func fetchShoppings(completion: @escaping ([ShoppingModel], Error?) -> Void) {
-//        let backgroundContext = persistentContainer.newBackgroundContext()
-//        backgroundContext.perform {
-//            let fetchRequest: NSFetchRequest<Shopping> = Shopping.fetchRequest()
-//            do {
-//                let results = try backgroundContext.fetch(fetchRequest)
-//                var shoppingsModel: [ShoppingModel] = []
-//                for result in results {
-//                    let shoppingModel = ShoppingModel(id: result.id ?? UUID(), name: result.name, price: result.price, date: result.date ?? Date(), isCompleted: result.isCompleted)
-//                    shoppingsModel.append(shoppingModel)
-//                }
-//                DispatchQueue.main.async {
-//                    completion(shoppingsModel, nil)
-//                }
-//            } catch {
-//                DispatchQueue.main.async {
-//                    completion([], error)
-//                }
-//            }
-//        }
-//    }
-//    
-//    func confirmShopping(id: UUID, isCompleted: Bool, completion: @escaping (Error?) -> Void) {
-//        let backgroundContext = persistentContainer.newBackgroundContext()
-//        backgroundContext.perform {
-//            let fetchRequest: NSFetchRequest<Shopping> = Shopping.fetchRequest()
-//            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
-//            
-//            do {
-//                let results = try backgroundContext.fetch(fetchRequest)
-//                if let shopping = results.first {
-//                    shopping.isCompleted = isCompleted
-//                    shopping.date = Date()
-//                } else {
-//                    completion(NSError(domain: "CoreDataManager", code: 404, userInfo: [NSLocalizedDescriptionKey: "Order not found"]))
-//                }
-//                try backgroundContext.save()
-//                DispatchQueue.main.async {
-//                    completion(nil)
-//                }
-//            } catch {
-//                DispatchQueue.main.async {
-//                    completion(error)
-//                }
-//            }
-//        }
-//    }
-
+    func fetchCompletedOrders(completion: @escaping ([OrderModel], Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Order> = Order.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "isCompleted == true")
+            
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                var ordersModel: [OrderModel] = []
+                for result in results {
+                    let orderModel = OrderModel(
+                        id: result.id ?? UUID(),
+                        date: result.date ?? Date().stripTime(),
+                        client: result.client,
+                        phoneNumber: result.phoneNumber,
+                        costOfMaterials: result.costOfMaterials,
+                        productCost: result.productCost,
+                        priority: Int(result.priority),
+                        info: result.info,
+                        completionDate: result.completionDate,
+                        isCompleted: result.isCompleted
+                    )
+                    ordersModel.append(orderModel)
+                }
+                DispatchQueue.main.async {
+                    completion(ordersModel, nil)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion([], error)
+                }
+            }
+        }
+    }
 }
 

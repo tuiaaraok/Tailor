@@ -15,4 +15,8 @@ extension UIFont {
     static func bold(size: CFloat) -> UIFont? {
         return UIFont(name: "Jaldi-Bold", size: CGFloat(size))
     }
+    
+    static func aurore(size: CFloat) -> UIFont? {
+        return UIFont(name: "LaBelleAurore", size: CGFloat(size))
+    }
 }

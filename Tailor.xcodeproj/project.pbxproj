@@ -52,6 +52,10 @@
 		6B83AC962CFE27460061FB37 /* OrderFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B83AC932CFE27460061FB37 /* OrderFormViewController.swift */; };
 		6B83AC982CFE2D4D0061FB37 /* PriceTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B83AC972CFE2D4D0061FB37 /* PriceTextField.swift */; };
 		6B83AC9B2CFE33220061FB37 /* OrderFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B83AC9A2CFE33220061FB37 /* OrderFormViewModel.swift */; };
+		6B83ACA02CFE67AA0061FB37 /* AnalyticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B83AC9F2CFE67AA0061FB37 /* AnalyticsViewController.xib */; };
+		6B83ACA12CFE67AA0061FB37 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B83AC9E2CFE67AA0061FB37 /* AnalyticsViewController.swift */; };
+		6B83ACA42CFE6AAC0061FB37 /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B83ACA32CFE6AAC0061FB37 /* AnalyticsViewModel.swift */; };
+		6B83ACA62CFE6DF80061FB37 /* LaBelleAurore.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B83ACA52CFE6DF80061FB37 /* LaBelleAurore.ttf */; };
 		F03A06F156D26B48BC2284BF /* Pods_Tailor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA14AE2D5FB27EBD12069BA /* Pods_Tailor.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +108,10 @@
 		6B83AC942CFE27460061FB37 /* OrderFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderFormViewController.xib; sourceTree = "<group>"; };
 		6B83AC972CFE2D4D0061FB37 /* PriceTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextField.swift; sourceTree = "<group>"; };
 		6B83AC9A2CFE33220061FB37 /* OrderFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFormViewModel.swift; sourceTree = "<group>"; };
+		6B83AC9E2CFE67AA0061FB37 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
+		6B83AC9F2CFE67AA0061FB37 /* AnalyticsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnalyticsViewController.xib; sourceTree = "<group>"; };
+		6B83ACA32CFE6AAC0061FB37 /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
+		6B83ACA52CFE6DF80061FB37 /* LaBelleAurore.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaBelleAurore.ttf; sourceTree = "<group>"; };
 		77F34EDF0ECBA4DE63DBCBEC /* Pods-Tailor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tailor.release.xcconfig"; path = "Target Support Files/Pods-Tailor/Pods-Tailor.release.xcconfig"; sourceTree = "<group>"; };
 		F206ED1462E4AFE145A908B0 /* Pods-Tailor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tailor.debug.xcconfig"; path = "Target Support Files/Pods-Tailor/Pods-Tailor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +158,7 @@
 		6B542EB12CFDA23A007877B6 /* Tailor */ = {
 			isa = PBXGroup;
 			children = (
+				6B83AC9C2CFE67870061FB37 /* Analytics */,
 				6B83AC902CFE26E40061FB37 /* OrderForm */,
 				6B83AC7F2CFDE9F40061FB37 /* Orders */,
 				6B83AC6F2CFDD7400061FB37 /* PortfolioForm */,
@@ -214,6 +223,7 @@
 				6B542EC72CFDA8E5007877B6 /* Font.swift */,
 				6B542EE32CFDA906007877B6 /* Jaldi-Bold.ttf */,
 				6B542EE42CFDA906007877B6 /* Jaldi-Regular.ttf */,
+				6B83ACA52CFE6DF80061FB37 /* LaBelleAurore.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -368,6 +378,32 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6B83AC9C2CFE67870061FB37 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				6B83ACA22CFE6A9F0061FB37 /* ViewModel */,
+				6B83AC9D2CFE67900061FB37 /* View */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		6B83AC9D2CFE67900061FB37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B83AC9E2CFE67AA0061FB37 /* AnalyticsViewController.swift */,
+				6B83AC9F2CFE67AA0061FB37 /* AnalyticsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B83ACA22CFE6A9F0061FB37 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B83ACA32CFE6AAC0061FB37 /* AnalyticsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DACE31A03A8215F1D4669EE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,8 +483,10 @@
 				6B83AC952CFE27460061FB37 /* OrderFormViewController.xib in Resources */,
 				6B83AC622CFDADE40061FB37 /* PortfolioViewController.xib in Resources */,
 				6B83AC732CFDD75E0061FB37 /* PortfolioFormViewController.xib in Resources */,
+				6B83ACA62CFE6DF80061FB37 /* LaBelleAurore.ttf in Resources */,
 				6B542EE62CFDA906007877B6 /* Jaldi-Bold.ttf in Resources */,
 				6B83AC832CFDEA0B0061FB37 /* OrdersViewController.xib in Resources */,
+				6B83ACA02CFE67AA0061FB37 /* AnalyticsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +563,7 @@
 				6B542EDF2CFDA8E5007877B6 /* BaseTextField.swift in Sources */,
 				6B542EE02CFDA8E5007877B6 /* UITextField.swift in Sources */,
 				6B83AC8A2CFDEBE00061FB37 /* OrdersViewModel.swift in Sources */,
+				6B83ACA42CFE6AAC0061FB37 /* AnalyticsViewModel.swift in Sources */,
 				6B83AC7E2CFDDE050061FB37 /* CoreDataManager.swift in Sources */,
 				6B83AC742CFDD75E0061FB37 /* PortfolioFormViewController.swift in Sources */,
 				6B83AC842CFDEA0B0061FB37 /* OrdersViewController.swift in Sources */,
@@ -534,6 +573,7 @@
 				6B83AC662CFDADFD0061FB37 /* PortfolioModel.swift in Sources */,
 				6B542EE22CFDA8E5007877B6 /* NumberTextField.swift in Sources */,
 				6B83AC9B2CFE33220061FB37 /* OrderFormViewModel.swift in Sources */,
+				6B83ACA12CFE67AA0061FB37 /* AnalyticsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
