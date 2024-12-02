@@ -9,6 +9,7 @@ target 'Tailor' do
   pod 'FirebaseAnalytics'
   pod 'Firebase/RemoteConfig'
   pod 'FSPagerView'
+  pod 'DropDown'
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

@@ -21,7 +21,9 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func clickedOrders(_ sender: UIButton) {
+        self.pushViewController(OrdersViewController.self)
     }
+    
     @IBAction func clickedAnalytics(_ sender: UIButton) {
     }
     @IBAction func clickedSettings(_ sender: UIButton) {

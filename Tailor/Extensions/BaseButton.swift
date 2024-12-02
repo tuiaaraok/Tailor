@@ -18,6 +18,8 @@ class BaseButton: UIButton {
     override var isSelected: Bool {
         didSet {
             self.backgroundColor = isSelected ? .button : .baseGray
+            let color = isSelected ? UIColor.white : .black
+            self.setTitleColor(color, for: .normal)
         }
     }
     

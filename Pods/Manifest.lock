@@ -1,4 +1,5 @@
 PODS:
+  - DropDown (2.3.13)
   - Firebase/CoreOnly (11.1.0):
     - FirebaseCore (= 11.1.0)
   - Firebase/RemoteConfig (11.1.0):
@@ -101,12 +102,14 @@ PODS:
   - PromisesObjC (2.4.0)
 
 DEPENDENCIES:
+  - DropDown
   - Firebase/RemoteConfig
   - FirebaseAnalytics
   - FSPagerView
 
 SPEC REPOS:
   trunk:
+    - DropDown
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -123,6 +126,7 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Firebase: fdb3bd378401f26a7adfcf446b0a630f8c20c0e8
   FirebaseABTesting: c2e22c3aab99afa81d0561708b2c1c356c556976
   FirebaseAnalytics: 9fcdb2e9844174bb405b34cc47092c9b91993d83
@@ -138,6 +142,6 @@ SPEC CHECKSUMS:
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
 
-PODFILE CHECKSUM: 749de271a9a13af57527c429489811317d7d32e4
+PODFILE CHECKSUM: cae59b7953c18dc5735d85946354ec2ab4c90b25
 
 COCOAPODS: 1.16.2
