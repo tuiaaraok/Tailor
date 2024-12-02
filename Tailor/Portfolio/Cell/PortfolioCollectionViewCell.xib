@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gTV-IL-0wX" customClass="PortfolioCollectionViewCell" customModule="Tailor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="173" height="176"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="173" height="176"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXN-1B-BDw" customClass="FSPagerView" customModule="FSPagerView">
+                        <rect key="frame" x="10" y="8" width="153" height="148"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLN-xw-jRK">
+                        <rect key="frame" x="10" y="156" width="153" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFx-uM-s6w" customClass="FSPageControl" customModule="FSPagerView">
+                        <rect key="frame" x="26" y="132" width="121" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="nbe-3Z-QEp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="wLN-xw-jRK" secondAttribute="bottom" id="7dk-r9-uUQ"/>
+                <constraint firstItem="wLN-xw-jRK" firstAttribute="top" secondItem="TFx-uM-s6w" secondAttribute="bottom" constant="4" id="DqK-3i-Z3X"/>
+                <constraint firstAttribute="trailing" secondItem="wLN-xw-jRK" secondAttribute="trailing" constant="10" id="IMz-2w-A1j"/>
+                <constraint firstItem="TFx-uM-s6w" firstAttribute="width" secondItem="cXN-1B-BDw" secondAttribute="width" multiplier="0.79085" id="NgU-bL-AVC"/>
+                <constraint firstItem="cXN-1B-BDw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Qdh-3B-R0C"/>
+                <constraint firstItem="wLN-xw-jRK" firstAttribute="top" secondItem="cXN-1B-BDw" secondAttribute="bottom" id="c6Q-Cj-aKw"/>
+                <constraint firstAttribute="trailing" secondItem="cXN-1B-BDw" secondAttribute="trailing" constant="10" id="czP-3f-LRf"/>
+                <constraint firstItem="TFx-uM-s6w" firstAttribute="centerX" secondItem="cXN-1B-BDw" secondAttribute="centerX" id="kt2-Yt-rGo"/>
+                <constraint firstItem="wLN-xw-jRK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="qcZ-wy-m1O"/>
+                <constraint firstItem="cXN-1B-BDw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="ub5-bi-PRV"/>
+            </constraints>
+            <size key="customSize" width="173" height="176"/>
+            <connections>
+                <outlet property="furLabel" destination="wLN-xw-jRK" id="4T8-I9-svR"/>
+                <outlet property="pageControl" destination="TFx-uM-s6w" id="JRl-WY-FgC"/>
+                <outlet property="pagerView" destination="cXN-1B-BDw" id="Qhc-eL-zBS"/>
+            </connections>
+            <point key="canvasLocation" x="232.82442748091603" y="64.08450704225352"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

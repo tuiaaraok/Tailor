@@ -17,14 +17,14 @@ class BaseButton: UIButton {
     
     override var isSelected: Bool {
         didSet {
-//            self.backgroundColor = isSelected ? .baseGreen : .baseGray
+            self.backgroundColor = isSelected ? .button : .baseGray
         }
     }
     
     func commonInit() {
-//        self.titleLabel?.font = .medium(size: 20)
-        self.setTitleColor(.black, for: .normal)
-//        self.backgroundColor = .baseGreen
+        self.titleLabel?.font = .regular(size: 22)
+        self.setTitleColor(.white, for: .normal)
+        self.backgroundColor = .button
         self.layer.cornerRadius = 8
         self.addShadow()
     }
